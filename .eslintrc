@@ -1,0 +1,30 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "plugins": [
+    "lodash",
+    "sonarjs",
+    "promise",
+  ],
+  "extends": [
+    "plugin:lodash/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:promise/recommended",
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2015
+  },
+  "ignorePatterns": [
+    "gulpfile.js",
+    "**/gulp_tasks/*.js",
+    "**/src/scripts/libraries/*.js",
+    "**/src/scripts/polyfills/*.js"
+  ],
+  "rules": {}
+}
