@@ -1,0 +1,52 @@
+.survey-item {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 200px;
+  height: 60px;
+
+  border-radius: $border-radius--large;
+
+  background-color: #8099cc;
+
+  cursor: pointer;
+  transition: $transition__component;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #003399;
+    }
+  }
+
+  &--selected {
+    background-color: #003399;
+  }
+  &__text {
+    padding-right: 40px;
+    color: $text-white;
+
+    font-size: $text__size--medium;
+    font-weight: $weight-ExtraBold;
+
+    text-align: center;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      font-size: $text__size--medium - 3;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+
+    transform: translateY(-50%);
+
+    @include breakpoint($breakpoint-laptop--large) {
+      right: 10px;
+    }
+  }
+}

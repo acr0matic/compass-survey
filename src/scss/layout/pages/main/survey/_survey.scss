@@ -13,6 +13,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    margin-bottom: 40px;
   }
 
   &__title {
@@ -24,5 +26,35 @@
     @include breakpoint($breakpoint-laptop--large) {
       font-size: $heading__size--medium;
     }
+  }
+
+  &__group {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      .survey__wrapper {
+        border-bottom: 1px solid #999999;
+      }
+    }
+  }
+
+  &__question {
+    margin-bottom: 30px;
+    font-size: $heading__size--small;
+    font-weight: $weight-SemiBold;
+
+    color: $text-blue;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 30px;
   }
 }
