@@ -3,9 +3,41 @@
 // -----------------------------------------------------------------------------
 
 #header {
+  background-color: $palette-white;
+  box-shadow: $shadow-primary;
 
+  border-bottom-left-radius: $border-radius--large;
+  border-bottom-right-radius: $border-radius--large;
 }
 
 .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  padding: 15px 0;
+
+  &__logo {
+    width: 100%;
+    max-width: 320px;
+
+    transition: $transition__image;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      max-width: 270px;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+  }
 }

@@ -1,0 +1,9 @@
+.link {
+  transition: $transition__text;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $text-yellow;
+    }
+  }
+}

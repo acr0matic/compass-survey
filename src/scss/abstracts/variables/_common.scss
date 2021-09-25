@@ -1,2 +1,12 @@
-// Максимальная ширина контейнера
-$container-max-width: 1180px;
+// Анимации смены стилей
+$transition__text: 0.2s ease;
+$transition__icon: 0.2s ease;
+$transition__component: 0.3s ease;
+$transition__image: 0.2s ease;
+
+// Сглаживание углов
+$border-radius--medium: 5px;
+$border-radius--large: 12px;
+
+// Тени
+$shadow-primary: 0 4px 4px rgba(0, 0, 0, 0.25);

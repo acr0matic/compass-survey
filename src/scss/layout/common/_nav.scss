@@ -1,13 +1,31 @@
 .nav {
   &__list {
-
+    display: flex;
+    align-items: center;
   }
 
   &__item {
-
   }
 
   &__link {
+  }
 
+  &--header {
+    .nav__item {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+
+    .nav__link {
+      font-weight: $weight-Bold;
+      font-size: $heading__size--small - 2;
+
+      color: $text-blue;
+
+      @include breakpoint($breakpoint-laptop--large) {
+        font-size: $text__size--medium;
+      }
+    }
   }
 }

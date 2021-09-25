@@ -2,9 +2,13 @@
 // В этом файле содержатся дополнительные или общие классы
 // -----------------------------------------------------------------------------
 
-.container {
+.container-custom {
   width: 100%;
-  max-width: $container-max-width;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+
+  @include breakpoint($breakpoint-laptop--large) {
+    max-width: 1200px;
+  }
 }
