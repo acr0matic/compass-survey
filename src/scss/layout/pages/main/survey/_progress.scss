@@ -7,11 +7,8 @@
     font-weight: $weight-Bold;
     color: $text-blue;
 
-<<<<<<< HEAD
     text-align: right;
 
-=======
->>>>>>> 466cb55c6ede86cddafcaaddc8724265240c0485
     @include breakpoint($breakpoint-laptop--large) {
       font-size: $heading__size--small;
     }
