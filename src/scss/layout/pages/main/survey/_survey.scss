@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// Фрагмент стилизации какой-то секции
+// -----------------------------------------------------------------------------
+
+#survey {
+}
+
+.survey {
+  border: 5px solid #c4c4c4;
+  padding: 40px 60px 60px 60px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: $heading__size--large;
+    font-weight: $weight-Bold;
+
+    color: $text-blue;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      font-size: $heading__size--medium;
+    }
+  }
+}
