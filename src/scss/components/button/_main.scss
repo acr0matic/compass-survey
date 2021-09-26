@@ -3,7 +3,10 @@
 // и подключение дополнительных вариаций
 // -----------------------------------------------------------------------------
 
-$button-primary__bg: #003399;
-$button-secondary__bg: #ffd600;
+$button-primary__bg: #ffd600;
+$button-secondary__bg: #003399;
 
 @import "button";
+@import "button-primary";
+@import "button-secondary";
+

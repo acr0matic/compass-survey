@@ -1,0 +1,17 @@
+.button {
+  display: block;
+
+  outline: none;
+  border: none;
+  border-radius: $border-radius--large;
+
+  padding: 14px 30px;
+
+  font-weight: $weight-Bold;
+  font-size: $text__size--large;
+
+  color: $text-white;
+
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
