@@ -3,9 +3,50 @@
 // -----------------------------------------------------------------------------
 
 #footer {
-
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
+  padding: 35px 40px;
+  border-radius: $border-radius--large;
+
+  background-color: #003399;
+  color: $text-white;
+
+  box-shadow: $shadow-primary;
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    font-size: $text__size--large;
+    font-weight: $weight-Bold;
+    text-align: right;
+  }
+
+  &__link {
+    color: $text-white;
+    text-decoration: underline;
+  }
+
+  &__icon {
+    transition: $transition__image;
+
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
 }
