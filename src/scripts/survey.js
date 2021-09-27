@@ -2,11 +2,7 @@ const survey = document.getElementById('survey');
 let surveyForm = null;
 const surveyResult = {
   'completed': 0,
-  'parameters': {
-    'Маг': 70,
-    'Шут': 40,
-    'Творец': 90,
-  },
+  'parameters': {},
 }
 
 const percentage = (partialValue, totalValue) => (100 * partialValue) / totalValue;
@@ -28,7 +24,7 @@ const surveySlider = new Swiper('.survey-slider', {
   },
 
   on: {
-    slideChange: () => {
+    slideChangeTransitionStart: () => {
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
@@ -65,6 +61,7 @@ if (survey) {
           UpdateProgress();
 
           isSelected = true;
+          button.closest('.survey__group').classList.remove('survey__group--missed')
         }
 
         SetParameter(currentGroup, buttonIndex);
@@ -108,5 +105,12 @@ if (survey) {
     surveyResult.parameters[param] = points;
   }
 
+  const CheckAnswer = () => {
+    // eslint-disable-next-line lodash/matches-prop-shorthand
+    const missed = _.filter(groups, group => group.dataset.value === undefined);
+    _.forEach(missed, (item) => item.classList.add('survey__group--missed'))
+  };
+
   UpdateProgress();
+  CheckAnswer();
 }

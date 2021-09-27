@@ -132,6 +132,7 @@ class Form {
     const additional = this.form.getAttribute('data-additional');
 
     data.append('target', target);
+    data.append('data', surveyResult);
     if (additional) data.append('additional', additional);
 
     // for (var pair of data.entries()) {

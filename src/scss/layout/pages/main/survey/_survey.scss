@@ -7,14 +7,22 @@
 
 .survey {
   border: 5px solid #c4c4c4;
-  padding: 40px 60px 60px 60px;
+  padding: 30px 60px 60px 60px;
 
   &__header {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    left: 0;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     margin-bottom: 40px;
+    padding: 10px;
+
+    background-color: $palette-white;
   }
 
   &__title {
@@ -35,6 +43,13 @@
   &__group {
     text-align: center;
 
+    &--missed {
+      .survey__question {
+        background-color: #ff4e4e;
+        color: $text-white;
+      }
+    }
+
     &:not(:last-child) {
       margin-bottom: 30px;
 
@@ -45,11 +60,20 @@
   }
 
   &__question {
-    margin-bottom: 30px;
+    display: inline-block;
+    margin-bottom: 25px;
+    padding: 5px;
+
     font-size: $heading__size--small;
     font-weight: $weight-SemiBold;
 
     color: $text-blue;
+
+    transition: $transition__text;
+
+    @include breakpoint($breakpoint-laptop--large) {
+      font-size: $text__size--medium;
+    }
   }
 
   &__wrapper {
