@@ -1,4 +1,5 @@
 const survey = document.getElementById('survey');
+let surveyForm = null;
 const surveyResult = {
   'completed': 0,
   'parameters': {},
@@ -6,7 +7,38 @@ const surveyResult = {
 
 const percentage = (partialValue, totalValue) => (100 * partialValue) / totalValue;
 
+const surveySlider = new Swiper('.survey-slider', {
+  slidesPerView: 1,
+  spaceBetween: 60,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true,
+  },
+
+  autoHeight: true,
+  allowTouchMove: false,
+
+  navigation: {
+    nextEl: '.survey-slider__next',
+    prevEl: '.survey-slider__prev',
+  },
+
+  on: {
+    slideChange: () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+
+      if (surveySlider.isEnd) surveyForm.classList.add('form-survey--visible')
+      else surveyForm.classList.remove('form-survey--visible')
+    },
+  }
+});
+
 if (survey) {
+  surveyForm = survey.querySelector('.form-survey');
+
   const progressBar = survey.querySelector('.survey-progress');
   const progressTitle = progressBar.querySelector('.survey-progress__count');
   const progressFill = progressBar.querySelector('.survey-progress__fill')

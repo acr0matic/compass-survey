@@ -1,0 +1,24 @@
+.survey-slider {
+  &__prev,
+  &__next {
+    top: initial;
+    bottom: 0;
+
+    width: initial;
+    height: initial;
+
+    margin-top: 0;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  &__prev {
+    left: -90px;
+  }
+
+  &__next {
+    right: -90px;
+  }
+}

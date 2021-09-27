@@ -1,4 +1,21 @@
 .form-survey {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: $transition__component;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+
+    max-height: 500px;
+
+    margin-top: 120px;
+  }
+
   .form__row {
     padding: 15px 25px;
     background-color: #4066b2;

@@ -1,0 +1,10 @@
+.swiper {
+  &-button-prev,
+  &-button-next {
+
+  }
+
+  &-button-disabled {
+    opacity: 0 !important;
+  }
+}

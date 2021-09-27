@@ -28,6 +28,10 @@
     }
   }
 
+  &__page {
+    padding-bottom: 60px;
+  }
+
   &__group {
     text-align: center;
 
@@ -59,6 +63,5 @@
   }
 
   &__form {
-    margin-top: 120px;
   }
 }
