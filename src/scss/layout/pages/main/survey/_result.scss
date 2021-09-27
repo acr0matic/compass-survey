@@ -1,4 +1,19 @@
 .survey-result {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: $transition__component;
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+
+    max-height: 1500px;
+  }
+
   &__map {
     position: relative;
     max-width: 1050px;

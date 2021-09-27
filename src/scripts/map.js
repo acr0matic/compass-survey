@@ -1,9 +1,11 @@
 const map = document.getElementById('map');
 const icons = map.querySelectorAll('.survey-result__parameter');
 
-_.forEach(icons, (icon) => {
-  new CircleType(icon.querySelector('span')).radius(60);
-});
+const InitMap = () => {
+  _.forEach(icons, (icon) => {
+    new CircleType(icon.querySelector('span')).radius(60);
+  });
+};
 
 const SetArchetypes = () => {
   _.forEach(surveyResult.parameters, (value, key) => {
@@ -17,5 +19,3 @@ const SetArchetypes = () => {
     else if (value > 80) active.classList.add('survey-result__parameter--high')
   });
 }
-
-SetArchetypes();

@@ -100,7 +100,7 @@
           </div>
           <!-- /.survey__header -->
 
-          <div style="display: none;" class="survey__slider position-relative">
+          <div class="survey__slider position-relative">
             <div class="swiper survey-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -349,7 +349,7 @@
           </div>
           <!-- /.survey__slider -->
 
-          <form style="display: none;" action="" class="survey__form form form-survey">
+          <form action="" class="survey__form form form-survey">
             <div class="form__title">Получить результаты</div>
 
             <div class="survey__wrapper">
@@ -359,8 +359,8 @@
                     <div class="col-3">
                       <label class="input">
                         <span class="input__placeholder me-2">Имя</span>
-                        <input placeholder="" autocomplete="off" type="" name="user_name" class="input__field">
-                        <img data-tippy-content="" class="input__warning" src="" alt="">
+                        <input data-required placeholder="Иван" autocomplete="off" type="" name="user_name" class="input__field">
+                        <img data-tippy-content="Номер телефона не указано или указано не верно" class="input__warning" src="img/icons/misc/warning.svg" alt="">
                       </label>
                       <!-- /.input -->
                     </div>
@@ -369,8 +369,8 @@
                     <div class="col-4">
                       <label class="input">
                         <span class="input__placeholder me-2">Email</span>
-                        <input placeholder="" autocomplete="off" type="" name="user_email" class="input__field">
-                        <img data-tippy-content="" class="input__warning" src="" alt="">
+                        <input data-required placeholder="ivan@email.com" autocomplete="off" type="" name="user_email" class="input__field">
+                        <img data-tippy-content="Номер телефона не указан или указан не верно" class="input__warning" src="img/icons/misc/warning.svg" alt="">
                       </label>
                       <!-- /.input -->
                     </div>
@@ -380,7 +380,7 @@
                       <div class="input">
                         <span class="input__placeholder me-4">Пол</span>
                         <label class="input__label me-4 mt-1">
-                          <input placeholder="" autocomplete="off" type="radio" name="user_gender" class="input__radio radio">
+                          <input checked placeholder="" autocomplete="off" type="radio" name="user_gender" class="input__radio radio">
                           <span class="ms-2">М</span>
                         </label>
 
@@ -398,8 +398,8 @@
                     <div class="col-2">
                       <label class="input">
                         <span class="input__placeholder me-2">Возраст</span>
-                        <input placeholder="" autocomplete="off" type="number" min="0" max="99" name="user_age" class="input__field">
-                        <img data-tippy-content="" class="input__warning" src="" alt="">
+                        <input data-required placeholder="24" autocomplete="off" type="number" min="0" max="99" name="user_age" class="input__field">
+                        <img data-tippy-content="Возраст не указан или указан не верно" class="input__warning" src="img/icons/misc/warning.svg" alt="">
                       </label>
                       <!-- /.input -->
                     </div>
@@ -415,7 +415,7 @@
                   <span class="checkbox__label">Получать письма с полезной информацией и новостями</span>
                 </label>
 
-                <button class="form__button button button-primary mx-auto mb-4">Результат</button>
+                <button type="submit" data-loading="Отправка..." class="form__button button button-primary mx-auto mb-4">Результат</button>
                 <p class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a class="form__link link" href="">политикой конфиденциальности</a></p>
               </div>
               <!-- /.survey-form__wrapper -->
@@ -593,7 +593,11 @@
   <script src="scripts/libraries/lazyload.js"></script>
   <script src="scripts/libraries/lodash.js"></script>
   <script src="scripts/libraries/swiper.min.js"></script>
+  <script src="scripts/libraries/html2canvas.min.js"></script>
   <script src="scripts/libraries/circletype.min.js"></script>
+  <script src="scripts/libraries/popper.js"></script>
+  <script src="scripts/libraries/tippy.js"></script>
+  <script src="scripts/libraries/formController.js"></script>
 
   <script src="scripts/main.js"></script>
   <script src="scripts/survey.js"></script>

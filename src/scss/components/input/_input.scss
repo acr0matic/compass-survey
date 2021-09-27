@@ -5,6 +5,17 @@
 
   width: 100%;
 
+  &--error {
+    .input__field {
+      border-color: $input--error;
+    }
+
+    .input__warning {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
   &__placeholder {
     font-weight: $weight-SemiBold;
     font-size: $text__size--large;
@@ -28,7 +39,7 @@
   &__field {
     width: 100%;
 
-    border: none;
+    border: 1px solid transparent;
     border-radius: $border-radius--medium;
     outline: none;
 
@@ -41,11 +52,29 @@
     transition: $transition__component;
     color: $text-black;
 
+    &::placeholder {
+      color: #b8b8b8;
+      font-weight: $weight-Regular;
+    }
+
     @media (hover: hover) {
       &:hover {
         background-color: #ffffff;
       }
     }
+  }
+
+  &__warning {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+
+    cursor: help;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.2s ease;
   }
 }
 
