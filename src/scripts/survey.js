@@ -2,7 +2,11 @@ const survey = document.getElementById('survey');
 let surveyForm = null;
 const surveyResult = {
   'completed': 0,
-  'parameters': {},
+  'parameters': {
+    'Маг': 70,
+    'Шут': 40,
+    'Творец': 90,
+  },
 }
 
 const percentage = (partialValue, totalValue) => (100 * partialValue) / totalValue;

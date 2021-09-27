@@ -1,0 +1,153 @@
+.survey-result {
+  &__map {
+    position: relative;
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-top: 40px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    font-size: 20px;
+    font-weight: $weight-SemiBold;
+
+    .low {
+      color: #eee507;
+    }
+
+    .medium {
+      color: #fd9800;
+    }
+
+    .high {
+      color: #de5000;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__group {
+    position: absolute;
+    display: flex;
+
+    &--top,
+    &--bottom {
+      left: 50%;
+      align-items: center;
+
+      transform: translateX(-50%);
+
+      .survey-result__percentage {
+        bottom: -25px;
+      }
+    }
+
+    &--right,
+    &--left {
+      top: 50%;
+      flex-direction: column;
+
+      transform: translateY(-50%);
+
+      .survey-result__percentage {
+        bottom: 15%;
+        left: -20px;
+      }
+    }
+
+    &--top {
+      top: 80px;
+      padding-right: 50px;
+    }
+
+    &--right {
+      right: 80px;
+      padding-top: 110px;
+
+      .survey-result__percentage {
+        left: -20px;
+      }
+    }
+
+    &--left {
+      left: 80px;
+      padding-bottom: 110px;
+
+      .survey-result__percentage {
+        left: 100px;
+      }
+    }
+
+    &--bottom {
+      bottom: 85px;
+      padding-left: 50px;
+    }
+  }
+
+  &__parameter {
+    position: relative;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    background-color: #c4c4c4;
+
+    &--low {
+      background-color: #eee507;
+    }
+
+    &--medium {
+      background-color: #fd9800;
+    }
+
+    &--high {
+      background-color: #de5000;
+    }
+  }
+
+  &__title,
+  &__percentage {
+    position: absolute;
+
+    font-size: 16px;
+    font-weight: $weight-SemiBold;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+  }
+
+  &__title {
+    top: -25px;
+  }
+
+  &__percentage {
+    &::after {
+      content: "%";
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+}
