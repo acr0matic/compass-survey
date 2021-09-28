@@ -15,6 +15,15 @@
   cursor: pointer;
   transition: $transition__component;
 
+  @include breakpoint($breakpoint-laptop--medium) {
+    width: 155px;
+  }
+
+  @include breakpoint($breakpoint-tablet--large) {
+    width: 115px;
+    height: 50px;
+  }
+
   @media (hover: hover) {
     &:hover {
       background-color: #003399;
@@ -24,6 +33,7 @@
   &--selected {
     background-color: #003399;
   }
+
   &__text {
     padding-right: 40px;
     color: $text-white;
@@ -36,6 +46,14 @@
     @include breakpoint($breakpoint-laptop--large) {
       font-size: $text__size--medium - 3;
     }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: $text__size--small + 2;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $text__size--small - 4;
+    }
   }
 
   &__icon {
@@ -47,6 +65,16 @@
 
     @include breakpoint($breakpoint-laptop--large) {
       right: 10px;
+    }
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      right: 5px;
+      width: 42px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      right: 10px;
+      width: 32px;
     }
   }
 }

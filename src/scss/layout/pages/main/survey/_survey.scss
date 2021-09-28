@@ -34,6 +34,10 @@
     @include breakpoint($breakpoint-laptop--large) {
       font-size: $heading__size--medium;
     }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $text__size--large;
+    }
   }
 
   &__page {
@@ -73,6 +77,11 @@
 
     @include breakpoint($breakpoint-laptop--large) {
       font-size: $text__size--medium;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      margin-bottom: 15px;
+      font-size: $text__size--medium - 3;
     }
   }
 

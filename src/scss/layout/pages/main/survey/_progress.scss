@@ -12,6 +12,10 @@
     @include breakpoint($breakpoint-laptop--large) {
       font-size: $heading__size--small;
     }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      font-size: $text__size--medium;
+    }
   }
 
   &__line {
@@ -21,6 +25,10 @@
 
     @include breakpoint($breakpoint-laptop--large) {
       width: 370px;
+    }
+
+    @include breakpoint($breakpoint-tablet--large) {
+      width: 270px;
     }
   }
 
