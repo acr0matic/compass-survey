@@ -46,6 +46,19 @@ if (survey) {
   const groups = survey.querySelectorAll('.survey__group');
   const items = _.invokeMap(groups, 'querySelectorAll', '.survey-item');
 
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    console.log('test');
+    _.forEach(items, (item) => {
+      _.forEach(item, (button, index) => {
+        const text = button.querySelector('span');
+        if (index === 0) text.innerHTML = "Точно <br> Нет";
+        if (index === 1) text.innerHTML = "Нет";
+        if (index === 3) text.innerHTML = "Да";
+        if (index === 4) text.innerHTML = "Точно <br> Да";
+      });
+    });
+  }
+
   // Проходимся по группам кнопок
   _.forEach(items, (item, groupIndex) => {
     const currentGroup = groups[groupIndex];

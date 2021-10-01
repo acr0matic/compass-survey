@@ -9,6 +9,10 @@
   border: 5px solid #c4c4c4;
   padding: 30px 60px 60px 60px;
 
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 10px;
+  }
+
   &__header {
     position: sticky;
     z-index: 100;
@@ -38,6 +42,11 @@
     @include breakpoint($breakpoint-tablet--large) {
       font-size: $text__size--large;
     }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-right: 15px;
+      font-size: 16px;
+    }
   }
 
   &__page {
@@ -56,6 +65,10 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+
+      @include breakpoint($breakpoint-mobile--large) {
+        margin-bottom: 10px;
+      }
 
       .survey__wrapper {
         border-bottom: 1px solid #999999;
@@ -83,6 +96,10 @@
       margin-bottom: 15px;
       font-size: $text__size--medium - 3;
     }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: 14px;
+    }
   }
 
   &__wrapper {
@@ -93,6 +110,10 @@
     max-width: 1100px;
     margin: 0 auto;
     padding-bottom: 30px;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      padding-bottom: 10px;
+    }
   }
 
   &__form {

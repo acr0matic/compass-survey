@@ -20,6 +20,16 @@
 
   box-shadow: $shadow-primary;
 
+  @include breakpoint($breakpoint-mobile--large) {
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  @include breakpoint($breakpoint-mobile--medium) {
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__social {
     display: flex;
     align-items: center;
@@ -33,6 +43,16 @@
     font-size: $text__size--large;
     font-weight: $weight-Bold;
     text-align: right;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: 10px;
+    }
+
+    @include breakpoint($breakpoint-mobile--medium) {
+      align-items: center;
+
+      margin-top: 15px;
+    }
   }
 
   &__link {
@@ -42,6 +62,10 @@
 
   &__icon {
     transition: $transition__image;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      width: 24px;
+    }
 
     @media (hover: hover) {
       &:hover {

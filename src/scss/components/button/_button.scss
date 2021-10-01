@@ -16,7 +16,17 @@
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   transition: $transition__component;
 
+  @include breakpoint($breakpoint-mobile--large) {
+    padding: 10px 24px;
+
+    border-radius: $border-radius--medium;
+  }
+
   &--small {
     font-size: $text__size--medium;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $text__size--small;
+    }
   }
 }

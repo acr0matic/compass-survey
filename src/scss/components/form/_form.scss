@@ -6,6 +6,11 @@
 
     color: $text-blue;
     text-align: center;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-bottom: 20px;
+      font-size: 21px;
+    }
   }
 
   &__wrapper {
@@ -31,7 +36,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;

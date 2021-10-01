@@ -21,6 +21,14 @@
     font-size: $text__size--large;
 
     color: $text-white;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: 16px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      min-width: 65px;
+    }
   }
 
   &__label {
@@ -51,6 +59,10 @@
 
     transition: $transition__component;
     color: $text-black;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: 16px;
+    }
 
     &::placeholder {
       color: #b8b8b8;

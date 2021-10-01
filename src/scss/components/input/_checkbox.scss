@@ -60,6 +60,14 @@
     transition: color 0.15s ease;
 
     cursor: pointer;
+
+    @include breakpoint($breakpoint-laptop--medium) {
+      font-size: 18px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: 14px;
+    }
   }
 
   &__policy {

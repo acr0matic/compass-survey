@@ -16,9 +16,17 @@
 
   &__prev {
     left: -90px;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      left: 0;
+    }
   }
 
   &__next {
     right: -90px;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      right: 0;
+    }
   }
 }

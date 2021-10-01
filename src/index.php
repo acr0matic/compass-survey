@@ -79,12 +79,17 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
   <header id="header">
     <div class="container-custom">
       <div class="header">
+        <div class="header__burger">
+          <img src="img/icons/misc/burger.svg" alt="">
+        </div>
+        <!-- /.header__burger -->
+
         <div class="header__logo">
           <a href=""><img src="img/logo.png" alt=""></a>
         </div>
         <!-- /.header__logo -->
 
-        <nav class="nav nav--header">
+        <nav class="header__nav nav nav--header">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link link" href="">Пройти тест</a></li>
             <li class="nav__item"><a class="nav__link link" href="">Архетипы</a></li>
@@ -198,7 +203,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
               <div class="form__wrapper">
                 <div class="form__row">
                   <div class="row align-items-center">
-                    <div class="col-3">
+                    <div class="col-12 col-md-3 mb-3 mb-lg-0">
                       <label class="input">
                         <span class="input__placeholder me-2">Имя</span>
                         <input data-required placeholder="Иван" autocomplete="off" type="" name="user_name" class="input__field">
@@ -208,7 +213,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
                     </div>
                     <!-- /.col-4 -->
 
-                    <div class="col-4">
+                    <div class="col-12 col-md-4 mb-3 mb-lg-0">
                       <label class="input">
                         <span class="input__placeholder me-2">Email</span>
                         <input data-required placeholder="ivan@email.com" autocomplete="off" type="" name="user_email" class="input__field">
@@ -218,7 +223,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
                     </div>
                     <!-- /.col-4 -->
 
-                    <div class="col-3 ps-5">
+                    <div class="col-12 col-md-3 ps-xxl-5 mb-3 mb-lg-0">
                       <div class="input">
                         <span class="input__placeholder me-4">Пол</span>
                         <label class="input__label me-4 mt-1">
@@ -237,7 +242,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
                     </div>
                     <!-- /.col-3 -->
 
-                    <div class="col-2">
+                    <div class="col-12 col-md-2">
                       <label class="input">
                         <span class="input__placeholder me-2">Возраст</span>
                         <input data-required placeholder="24" autocomplete="off" type="number" min="0" max="99" name="user_age" class="input__field">
@@ -251,7 +256,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
                 </div>
                 <!-- /.form__row -->
 
-                <label class="checkbox mt-5 ms-4">
+                <label class="checkbox mt-3 mt-xxl-5 ms-4">
                   <input name="user_subscribe" type="checkbox">
                   <span class="checkbox__mark"></span>
                   <span class="checkbox__label">Получать письма с полезной информацией и новостями</span>
@@ -397,19 +402,19 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
     <div class="container">
       <div class="footer">
         <div class="footer__social">
-          <a href="" class="me-3 link">
+          <a href="" class="me-1 me-lg-3 link">
             <img class="footer__icon " src="img/social/instagram.png" alt="">
           </a>
 
-          <a href="" class="me-3 link">
+          <a href="" class="me-1 me-lg-3 link">
             <img class="footer__icon " src="img/social/vk.png" alt="">
           </a>
 
-          <a href="" class="me-3 link">
+          <a href="" class="me-1 me-lg-3 link">
             <img class="footer__icon " src="img/social/telegram.png" alt="">
           </a>
 
-          <a href="" class="me-3 link">
+          <a href="" class="me-1 me-lg-3 link">
             <img class="footer__icon " src="img/social/facebook.png" alt="">
           </a>
 

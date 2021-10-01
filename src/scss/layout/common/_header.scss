@@ -17,6 +17,15 @@
 
   padding: 15px 0;
 
+  &__burger {
+    display: none;
+    margin-left: 10px;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      display: block;
+    }
+  }
+
   &__logo {
     width: 100%;
     max-width: 320px;
@@ -25,6 +34,11 @@
 
     @include breakpoint($breakpoint-laptop--large) {
       max-width: 270px;
+    }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      max-width: 140px;
+      margin-left: auto;
     }
 
     @media (hover: hover) {
@@ -39,5 +53,8 @@
   }
 
   &__nav {
+    @include breakpoint($breakpoint-mobile--large) {
+      display: none;
+    }
   }
 }

@@ -25,5 +25,9 @@
     background-color: #4066b2;
 
     border-radius: $border-radius--large;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      border-radius: $border-radius--medium;
+    }
   }
 }
