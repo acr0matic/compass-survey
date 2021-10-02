@@ -19,10 +19,18 @@
 
   &__button {
     margin-top: 85px;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      margin-top: 65px;
+    }
   }
 
   &__privacy {
     text-align: center;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      font-size: $text__size--small;
+    }
   }
 
   &__link {

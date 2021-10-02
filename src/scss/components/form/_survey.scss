@@ -18,6 +18,10 @@
     @include breakpoint($breakpoint-laptop--large) {
       margin-top: 90px;
     }
+
+    @include breakpoint($breakpoint-mobile--large) {
+      max-height: 550px;
+    }
   }
 
   .form__row {
