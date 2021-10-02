@@ -287,106 +287,109 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
           <!-- /.survey__form form survey-form -->
 
           <div id="map" class="survey__result survey-result">
-            <div class="survey-result__map">
-              <img src="img/map/map.jpg" alt="" class="survey-result__image">
+            <div class="survey-result__wrapper">
+              <div class="survey-result__map">
+                <img src="img/map/map.jpg" alt="" class="survey-result__image">
 
-              <div class="survey-result__group survey-result__group--top">
-                <div data-parameter="Герой" class="survey-result__parameter me-5">
-                  <span class="survey-result__title">Герой</span>
-                  <img src="img/map/Герой.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
+                <div class="survey-result__group survey-result__group--top">
+                  <div data-parameter="Герой" class="survey-result__parameter me-5">
+                    <span class="survey-result__title">Герой</span>
+                    <img src="img/map/Герой.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
 
-                <div data-parameter="Маг" class="survey-result__parameter me-5">
-                  <span class="survey-result__title">Маг</span>
-                  <img src="img/map/Маг.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
+                  <div data-parameter="Маг" class="survey-result__parameter me-5">
+                    <span class="survey-result__title">Маг</span>
+                    <img src="img/map/Маг.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
 
-                <div data-parameter="Бунтарь" class="survey-result__parameter">
-                  <span class="survey-result__title">Бунтарь</span>
-                  <img src="img/map/Бунтарь.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
+                  <div data-parameter="Бунтарь" class="survey-result__parameter">
+                    <span class="survey-result__title">Бунтарь</span>
+                    <img src="img/map/Бунтарь.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
                 </div>
-                <!-- /.survey-result__parameter -->
+                <!-- /.survey-result__group -->
+
+                <div class="survey-result__group survey-result__group--right">
+                  <div data-parameter="Простодушный" class="survey-result__parameter mb-5">
+                    <span class="survey-result__title">Простодушный</span>
+                    <img src="img/map/Простодушный.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+
+                  <div data-parameter="Мудрец" class="survey-result__parameter mb-5">
+                    <span class="survey-result__title">Мудрец</span>
+                    <img src="img/map/Мудрец.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+
+                  <div data-parameter="Искатель" class="survey-result__parameter">
+                    <span class="survey-result__title">Искатель</span>
+                    <img src="img/map/Искатель.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+                </div>
+                <!-- /.survey-result__group -->
+
+                <div class="survey-result__group survey-result__group--bottom">
+                  <div data-parameter="Заботливый" class="survey-result__parameter me-5">
+                    <span class="survey-result__title">Заботливый</span>
+                    <img src="img/map/Заботливый.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+
+                  <div data-parameter="Правитель" class="survey-result__parameter me-5">
+                    <span class="survey-result__title">Правитель</span>
+                    <img src="img/map/Правитель.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+
+                  <div data-parameter="Творец" class="survey-result__parameter">
+                    <span class="survey-result__title">Творец</span>
+                    <img src="img/map/Творец.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+                </div>
+                <!-- /.survey-result__group -->
+
+                <div class="survey-result__group survey-result__group--left">
+                  <div data-parameter="Славный малый" class="survey-result__parameter mb-5">
+                    <span class="survey-result__title">Славный малый</span>
+                    <img src="img/map/Славный малый.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+
+                  <div data-parameter="Шут" class="survey-result__parameter mb-5">
+                    <span class="survey-result__title">Шут</span>
+                    <img src="img/map/Шут.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+
+                  <div data-parameter="Любовник" class="survey-result__parameter">
+                    <span class="survey-result__title">Любовник</span>
+                    <img src="img/map/Любовник.png" alt="" class="survey-result__icon">
+                    <span class="survey-result__percentage">0</span>
+                  </div>
+                  <!-- /.survey-result__parameter -->
+                </div>
+                <!-- /.survey-result__group -->
               </div>
-              <!-- /.survey-result__group -->
-
-              <div class="survey-result__group survey-result__group--right">
-                <div data-parameter="Простодушный" class="survey-result__parameter mb-5">
-                  <span class="survey-result__title">Простодушный</span>
-                  <img src="img/map/Простодушный.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-
-                <div data-parameter="Мудрец" class="survey-result__parameter mb-5">
-                  <span class="survey-result__title">Мудрец</span>
-                  <img src="img/map/Мудрец.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-
-                <div data-parameter="Искатель" class="survey-result__parameter">
-                  <span class="survey-result__title">Искатель</span>
-                  <img src="img/map/Искатель.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-              </div>
-              <!-- /.survey-result__group -->
-
-              <div class="survey-result__group survey-result__group--bottom">
-                <div data-parameter="Заботливый" class="survey-result__parameter me-5">
-                  <span class="survey-result__title">Заботливый</span>
-                  <img src="img/map/Заботливый.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-
-                <div data-parameter="Правитель" class="survey-result__parameter me-5">
-                  <span class="survey-result__title">Правитель</span>
-                  <img src="img/map/Правитель.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-
-                <div data-parameter="Творец" class="survey-result__parameter">
-                  <span class="survey-result__title">Творец</span>
-                  <img src="img/map/Творец.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-              </div>
-              <!-- /.survey-result__group -->
-
-              <div class="survey-result__group survey-result__group--left">
-                <div data-parameter="Славный малый" class="survey-result__parameter mb-5">
-                  <span class="survey-result__title">Славный малый</span>
-                  <img src="img/map/Славный малый.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-
-                <div data-parameter="Шут" class="survey-result__parameter mb-5">
-                  <span class="survey-result__title">Шут</span>
-                  <img src="img/map/Шут.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-
-                <div data-parameter="Любовник" class="survey-result__parameter">
-                  <span class="survey-result__title">Любовник</span>
-                  <img src="img/map/Любовник.png" alt="" class="survey-result__icon">
-                  <span class="survey-result__percentage">0</span>
-                </div>
-                <!-- /.survey-result__parameter -->
-              </div>
-              <!-- /.survey-result__group -->
+              <!-- /.survey-result__map -->
             </div>
-            <!-- /.survey-result__map -->
+            <!-- /.survey-result__wrapper -->
 
             <div class="survey-result__action">
               <div class="survey-result__info">
@@ -397,7 +400,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
               <!-- /.survey-result__info -->
 
               <div class="survey-result__buttons">
-                <button class="button button-primary me-4">Сохранить результат</button>
+                <button class="button button-primary mt-3 mt-lg-0 mb-3 mb-lg-0 me-lg-4">Сохранить результат</button>
                 <button class="button button-secondary">Узнать подробнее</button>
               </div>
               <!-- /.survey-result__buttons -->

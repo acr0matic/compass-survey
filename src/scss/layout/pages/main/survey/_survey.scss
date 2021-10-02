@@ -27,6 +27,10 @@
     padding: 10px;
 
     background-color: $palette-white;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      top: 70px;
+    }
   }
 
   &__title {
