@@ -122,22 +122,22 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
     <section id="survey">
       <div class="container">
         <div class="survey">
-          <div class="survey__header">
-            <h1 class="survey__title">Тест на архетипы</h1>
-
-            <div class="survey__progress survey-progress">
-              <div class="survey-progress__title">Вопрос <span class="survey-progress__count">1/72</span></div>
-              <div class="survey-progress__line">
-                <div class="survey-progress__fill"></div>
-                <div class="survey-progress__track"></div>
-              </div>
-              <!-- /.survey-progress__line -->
-            </div>
-            <!-- /.survey__progress survey-progress -->
-          </div>
-          <!-- /.survey__header -->
-
           <div class="survey__slider position-relative">
+            <div class="survey__header">
+              <h1 class="survey__title">Тест на архетипы</h1>
+
+              <div class="survey__progress survey-progress">
+                <div class="survey-progress__title">Вопрос <span class="survey-progress__count">1/72</span></div>
+                <div class="survey-progress__line">
+                  <div class="survey-progress__fill"></div>
+                  <div class="survey-progress__track"></div>
+                </div>
+                <!-- /.survey-progress__line -->
+              </div>
+              <!-- /.survey__progress survey-progress -->
+            </div>
+            <!-- /.survey__header -->
+
             <div class="swiper survey-slider">
               <?php
               $index = 0;
@@ -276,6 +276,8 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
                   <span class="checkbox__mark"></span>
                   <span class="checkbox__label">Получать письма с полезной информацией и новостями</span>
                 </label>
+
+                <p class="form__error">Вы ответили не на все вопросы! Пожалуйста, проверьте еще раз свои ответы.</p>
 
                 <button type="submit" data-sending="Отправка..." class="form__button button button-primary mx-auto mb-4">Результат</button>
                 <p class="form__privacy">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a class="form__link link" href="">политикой конфиденциальности</a></p>

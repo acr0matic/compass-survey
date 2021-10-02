@@ -120,13 +120,13 @@ if (survey) {
 
   const CheckAnswer = () => {
     // eslint-disable-next-line lodash/matches-prop-shorthand
-    // const missed = _.filter(groups, group => group.dataset.value === undefined);
-    const missed = _.reject(groups, 'dataset.parameter');
+    const missed = _.filter(groups, group => group.dataset.value === undefined);
+    // const missed = _.reject(groups, 'dataset.parameter');
 
-    console.log(groups);
     _.forEach(missed, (item) => item.classList.add('survey__group--missed'))
+
+    return document.querySelector('.survey__group--missed') === undefined;
   };
 
   UpdateProgress();
-  CheckAnswer();
 }

@@ -18,10 +18,10 @@
   }
 
   &__button {
-    margin-top: 85px;
+    margin-top: 65px;
 
     @include breakpoint($breakpoint-mobile--large) {
-      margin-top: 65px;
+      margin-top: 45px;
     }
   }
 
@@ -30,6 +30,30 @@
 
     @include breakpoint($breakpoint-mobile--large) {
       font-size: $text__size--small;
+    }
+  }
+
+  &__error {
+    margin-left: 23px;
+    margin-top: 10px;
+
+    font-weight: 600;
+    font-size: 18px;
+
+    color: $text-red;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: $transition__text;
+
+    @include breakpoint($breakpoint-tablet) {
+      font-size: $text__size--small;
+    }
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
     }
   }
 

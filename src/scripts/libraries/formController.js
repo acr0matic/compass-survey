@@ -13,6 +13,8 @@ class Form {
     this.fields = form.querySelectorAll('.input__field');
     this.required = form.querySelectorAll('[data-required]');
 
+    this.error = form.querySelector(".form__error");
+
     this.buttonDefault = this.submit.innerHTML;
 
     this.ValidateExpression = {
@@ -49,7 +51,7 @@ class Form {
     this.form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      if (this.CheckRequired() & this.InputValidate()) {
+      if (this.CheckAnswer() & this.CheckRequired() & this.InputValidate()) {
         this.submit.innerHTML = this.submit.getAttribute('data-sending');
         this.submit.setAttribute('disabled', 'disabled');
         this.form.classList.add('form--sending');
@@ -63,6 +65,20 @@ class Form {
       input.addEventListener('click', this.RemoveError(input));
     });
   }
+
+  CheckAnswer() {
+    const missed = _.filter(survey.querySelectorAll('.survey__group'), group => group.dataset.value === undefined);
+    _.forEach(missed, (item) => item.classList.add('survey__group--missed'))
+
+    const result = document.querySelector('.survey__group--missed') === undefined;
+    if (!result) {
+      this.error.classList.add('form__error--visible');
+      setTimeout(() => {
+        this.error.classList.remove('form__error--visible');
+      }, 3000);
+    }
+    return result;
+  };
 
   CheckRequired() {
     let isValid = true;
