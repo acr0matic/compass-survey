@@ -8,6 +8,13 @@
 
   border-bottom-left-radius: $border-radius--large;
   border-bottom-right-radius: $border-radius--large;
+
+  @include breakpoint($breakpoint-mobile--large) {
+    position: sticky;
+    z-index: 200;
+    top: 0;
+    left: 0;
+  }
 }
 
 .header {

@@ -102,6 +102,21 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
     <!-- /.container-custom -->
   </header>
 
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu__overlay"></div>
+
+    <div class="mobile-menu__wrapper">
+      <nav class="mobile-menu__nav nav nav--mobile">
+        <ul class="nav__list">
+          <li class="nav__item mb-3"><a href="" class="nav__link">Пройти тест</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Архетипы</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- /.mobile-menu__wrapper -->
+  </div>
+  <!-- /.mobile-menu -->
+
   <!-- Основной контент -->
   <main>
     <section id="survey">
@@ -449,6 +464,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
   <script src="scripts/main.js"></script>
   <script src="scripts/survey.js"></script>
   <script src="scripts/map.js"></script>
+  <script src="scripts/header.js"></script>
   <!-- endbuild -->
 </body>
 
