@@ -242,12 +242,12 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
                       <div class="input">
                         <span class="input__placeholder me-4">Пол</span>
                         <label class="input__label me-4 mt-1">
-                          <input checked placeholder="" autocomplete="off" type="radio" name="user_gender" class="input__radio radio">
+                          <input checked placeholder="" autocomplete="off" type="radio" value="Мужчина" name="user_gender" class="input__radio radio">
                           <span class="ms-2">М</span>
                         </label>
 
                         <label class="input__label mt-1">
-                          <input placeholder="" autocomplete="off" type="radio" name="user_gender" class="input__radio radio">
+                          <input placeholder="" autocomplete="off" type="radio" value="Женщина" name="user_gender" class="input__radio radio">
                           <span class="ms-2">Ж</span>
                         </label>
 

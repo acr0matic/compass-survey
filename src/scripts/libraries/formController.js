@@ -14,6 +14,7 @@ class Form {
     this.required = form.querySelectorAll('[data-required]');
 
     this.error = form.querySelector(".form__error");
+    this.screenshot;
 
     this.buttonDefault = this.submit.innerHTML;
 
@@ -56,7 +57,28 @@ class Form {
         this.submit.setAttribute('disabled', 'disabled');
         this.form.classList.add('form--sending');
 
-        this.Send();
+        const targetDiv = document.querySelector('.survey-result__wrapper');
+
+        InitMap();
+        SetArchetypes();
+
+
+        setTimeout(() => {
+          html2canvas(targetDiv, {
+            onclone: function (clonedDoc) {
+              clonedDoc.getElementById('map').style.opacity = '1';
+              clonedDoc.getElementById('map').style.visibility = 'visible';
+              clonedDoc.getElementById('map').style.maxHeight = 'initial';
+            }
+          }).then(canvas => canvas.toBlob(blob => {
+            const data = new FormData(this.form);
+
+            data.append('screenshot', blob, "screenshot.png");
+            data.append('result', surveyResult);
+
+            this.Send(data);
+          }));
+        }, 500);
       }
     });
 
@@ -70,7 +92,7 @@ class Form {
     const missed = _.filter(survey.querySelectorAll('.survey__group'), group => group.dataset.value === undefined);
     _.forEach(missed, (item) => item.classList.add('survey__group--missed'))
 
-    const result = document.querySelector('.survey__group--missed') === undefined;
+    const result = document.querySelector('.survey__group--missed') === null;
     if (!result) {
       this.error.classList.add('form__error--visible');
       setTimeout(() => {
@@ -141,19 +163,11 @@ class Form {
   }
 
   // Функция: Отправляем письмо
-  async Send() {
-    const data = new FormData(this.form);
+  async Send(data) {
 
-    const target = this.form.getAttribute('data-target');
-    const additional = this.form.getAttribute('data-additional');
-
-    data.append('target', target);
-    data.append('data', surveyResult);
-    if (additional) data.append('additional', additional);
-
-    // for (var pair of data.entries()) {
-    //   console.log(pair[0]+ ', ' + pair[1]);
-    // }
+    for (var pair of data.entries()) {
+      console.log(pair[0] + ', ' + pair[1]);
+    }
 
     try {
       SetArchetypes();
@@ -198,10 +212,5 @@ class Form {
     form.style.display = 'none';
 
     map.classList.add('survey-result--visible');
-
-    setTimeout(() => {
-      InitMap();
-      SetArchetypes();
-    }, 500);
   }
 }

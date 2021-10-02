@@ -1,5 +1,5 @@
 const header = document.querySelector('.survey__header');
-const slider = document.querySelector('.survey__slider');
+const slider = document.querySelector('.survey-slider');
 const form = document.querySelector('.form-survey')
 
 new Form(form);

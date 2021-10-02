@@ -1,6 +1,5 @@
 .survey-result {
   opacity: 0;
-  visibility: hidden;
   max-height: 0;
 
   overflow: hidden;
@@ -155,11 +154,6 @@
     border-radius: 50%;
     background-color: #c4c4c4;
 
-    // @include breakpoint($breakpoint-mobile--large) {
-    //   width: 40px;
-    //   height: 40px;
-    // }
-
     &--low {
       background-color: #eee507;
     }
@@ -183,10 +177,6 @@
     left: 50%;
 
     transform: translateX(-50%);
-
-    // @include breakpoint($breakpoint-mobile--large) {
-    //   font-size: 10px;
-    // }
   }
 
   &__title {
@@ -194,9 +184,6 @@
   }
 
   &__percentage {
-    &::after {
-      content: "%";
-    }
   }
 
   &__icon {
