@@ -9,6 +9,7 @@ const paths = {
     src: [
       './src/**/*.{html,php}',
       '!./src/php/**/*.php',
+      '!./src/vendor/**/*.*',
     ],
     dist: './dist/',
     watch: './src/**/*.{html,php}',
@@ -61,6 +62,7 @@ const paths = {
       '!./src/scripts/**/*.*',
       '!./src/scss/**/*.*',
       '!./src/*.{html,php}',
+      '!./src/vendor/**/*.*',
     ],
     dist: './dist/',
     watch: [

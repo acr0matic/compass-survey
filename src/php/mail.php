@@ -28,14 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   // Настройки вашей почты
   $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
-  $mail->Username   = 'best-for-home-24'; // Логин на почте
-  $mail->Password   = 'appleJack@22'; // Пароль на почте
+  $mail->Username   = 'invite@project-kompas999.ru'; // Логин на почте
+  $mail->Password   = '973973973sh'; // Пароль на почте
   $mail->SMTPSecure = 'ssl';
   $mail->Port       = 465;
-  $mail->setFrom('best-for-home-24@yandex.ru', 'Проект "Компас"'); // от кого будет уходить письмо?
-
-  // Получатель письма
-  $mail->addAddress('main.acr0matic@gmail.com');
+  $mail->setFrom('invite@project-kompas999.ru', 'Проект "Компас"'); // от кого будет уходить письмо?
 
   // Переменные
   $name      = (isset($_POST['user_name']))      ? $_POST['user_name']   : 'Не указано';
@@ -43,59 +40,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $gender    = (isset($_POST['user_gender']))    ? $_POST['user_gender'] : 'Не указан';
   $age       = (isset($_POST['user_age']))       ? $_POST['user_age']    : 'Не указан';
   $subscribe = (isset($_POST['user_subscribe'])) ? 'Да' : 'Нет';
+  $data      = json_decode(stripslashes($_POST['result']), true);
 
-  if ($calculator == 'true') {
-    $age = $_POST['user_age'];
-    $select = $_POST['user_select'];
 
-    // Формирование содержимого письма
-    $title = "Заявка с сайта Fasgrad.ru";
-    $body =
-      "
-      <html>
-      <p>
-       Контактная информация: <br> <br>
-       <b>Имя: </b> $name <br>
-       <b>Номер телефона: </b> <a href='mailto: $phone'> $phone </a> <br>
-       <b>Удобное время для звонка: </b> $time <br>
-      </p>
-   ";
+  $data = $data['parameters'];
+  $params = '';
 
-    $body .= "
-   <b>Данные из калькулятора: </b>
-   <table border='1' style='width: 100%; max-width: 500px; border-collapse: collapse; margin-top: 5px; margin-bottom: 15px'>
-   <thead>
-   <tr>
-    <th style='padding: 3px; text-align: left;'>Параметр</th>
-    <th style='padding: 3px; text-align: left;'>Значение</th>
-   </tr>
-   </thead>
-   <tbody>
-   ";
+  foreach ($data as $key => $value) {
+    $params .= $key . ' - <b>' . ceil($value) . '%</b> <br>';
+  }
 
-    foreach ($data as $key => $value) {
-      $body .= '
-    <tr>
-      <td style="padding: 3px" rowspan="2">' . $key . '</td>
-      <td style="padding: 3px" rowspan="2">' . $value . '</td>
-    <tr>
-    ';
-    }
-
-    $body .= "  </tbody></table></html>";
-
-    // Отправка сообщения
-    $mail->Subject = $title;
-    $mail->Body = $body;
-
-    $mail_info;
-
-    SendMail($mail, $status);
-  } else {
-    // Формирование содержимого письма
-    $title = "Заявка с сайта Fasgrad.ru";
-    $body =
-      "
+  // Формирование содержимого письма
+  $title = "Заявка с сайта Fasgrad.ru";
+  $body =
+    "
     <html>
      <p>
       Контактная информация: <br> <br>
@@ -104,21 +62,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <b>Пол: </b>$gender<br>
       <b>Возраст: </b>$age <br><br>
 
-      Получать письма с полезной информацией: <b>$subscribe</b>
+      Получать письма с полезной информацией: <b>$subscribe</b><hr><br>
+      $params
      </p>
     </html>
    ";
 
-    $filePath = $_FILES['screenshot']['tmp_name'];
-    $fileName = $_FILES['screenshot']['name'];
-    $mail->AddAttachment($filePath, $fileName);
+  $filePath = $_FILES['screenshot']['tmp_name'];
+  $fileName = $_FILES['screenshot']['name'];
+  $mail->AddAttachment($filePath, $fileName);
 
-    // Отправка сообщения
-    $mail->Subject = $title;
-    $mail->Body = $body;
+  // Получатель письма
+  $mail->addAddress('main.acr0matic@gmail.com');
+  $mail->addAddress($email);
 
-    SendMail($mail, $status);
-  }
+  // Отправка сообщения
+  $mail->Subject = $title;
+  $mail->Body = $body;
 
-  // echo json_encode($status);
+  SendMail($mail, $status);
 }
+
+  echo json_encode($status);

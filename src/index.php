@@ -24,7 +24,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <!-- Базовые мета-теги для поисковиков -->
-  <title>Заголовок</title>
+  <title>Тест на Архетипы</title>
 
   <!-- Иконки для страницы -->
   <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
@@ -45,7 +45,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
   <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
 
   <!-- Метатеги которые выводят информацию о странице в поисковой запрос -->
-  <meta name="description" content="описание не длиннее 155 символов" />
+  <meta name="description" content="Посмотри на себя с другой стороны" />
   <meta name="keywords" content="мета-теги, шаблон, html, css, acr0matic" />
 
   <!-- Метатеги для ссылок в социальных сетях -->
@@ -92,7 +92,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
         <nav class="header__nav nav nav--header">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link link" href="">Пройти тест</a></li>
-            <li class="nav__item"><a class="nav__link link" href="">Архетипы</a></li>
+            <li class="nav__item"><a class="nav__link link" href="project-kompas999.ru" target="_blank">Архетипы</a></li>
           </ul>
         </nav>
         <!-- /.nav -->
@@ -109,7 +109,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
       <nav class="mobile-menu__nav nav nav--mobile">
         <ul class="nav__list">
           <li class="nav__item mb-3"><a href="" class="nav__link">Пройти тест</a></li>
-          <li class="nav__item"><a href="" class="nav__link">Архетипы</a></li>
+          <li class="nav__item"><a href="project-kompas999.ru" target="_blank" class="nav__link">Архетипы</a></li>
         </ul>
       </nav>
     </div>
@@ -402,8 +402,8 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
               <!-- /.survey-result__info -->
 
               <div class="survey-result__buttons">
-                <button class="button button-primary mt-3 mt-lg-0 mb-3 mb-lg-0 me-lg-4">Сохранить результат</button>
-                <button class="button button-secondary">Узнать подробнее</button>
+                <a download="" href="" class="button button-primary mt-3 mt-lg-0 mb-3 mb-lg-0 me-lg-4">Сохранить результат</a>
+                <a href="project-kompas999.ru" target="_blank" class="button button-secondary">Узнать подробнее</a>
               </div>
               <!-- /.survey-result__buttons -->
             </div>

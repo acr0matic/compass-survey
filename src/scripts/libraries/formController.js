@@ -62,19 +62,29 @@ class Form {
         InitMap();
         SetArchetypes();
 
-
         setTimeout(() => {
           html2canvas(targetDiv, {
+            width: targetDiv.scrollWidth,
+            height: targetDiv.scrollHeight,
+
             onclone: function (clonedDoc) {
+              clonedDoc.querySelector('body').style.overflowX = 'visible';
+
               clonedDoc.getElementById('map').style.opacity = '1';
               clonedDoc.getElementById('map').style.visibility = 'visible';
               clonedDoc.getElementById('map').style.maxHeight = 'initial';
+              clonedDoc.getElementById('map').style.overflow = 'visible';
+
+              clonedDoc.querySelector('.survey-result__wrapper').style.overflow = 'visible'
             }
           }).then(canvas => canvas.toBlob(blob => {
             const data = new FormData(this.form);
 
             data.append('screenshot', blob, "screenshot.png");
-            data.append('result', surveyResult);
+            data.append('result', JSON.stringify(surveyResult));
+
+            saveButton.download = "Результат";
+            saveButton.href = URL.createObjectURL(blob);
 
             this.Send(data);
           }));
@@ -164,10 +174,9 @@ class Form {
 
   // Функция: Отправляем письмо
   async Send(data) {
-
-    for (var pair of data.entries()) {
-      console.log(pair[0] + ', ' + pair[1]);
-    }
+    // for (var pair of data.entries()) {
+    //   console.log(pair[0] + ', ' + pair[1]);
+    // }
 
     try {
       SetArchetypes();
@@ -209,6 +218,7 @@ class Form {
     header.classList.add('justify-content-center');
     header.innerHTML = '<h1 class="survey__title">Результаты</h1>'
     slider.style.display = 'none';
+    document.querySelector('.swiper__control').style.display = 'none';
     form.style.display = 'none';
 
     map.classList.add('survey-result--visible');

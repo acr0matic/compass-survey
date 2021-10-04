@@ -24,8 +24,12 @@
 
   &__map {
     position: relative;
-    min-width: 1050px;
+    max-width: 1050px;
     margin: 0 auto;
+
+    @include breakpoint($breakpoint-mobile--large) {
+      min-width: 1050px;
+    }
   }
 
   &__action {

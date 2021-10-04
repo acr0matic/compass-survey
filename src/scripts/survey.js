@@ -101,7 +101,8 @@ if (survey) {
 
   // Установка дата-атрибута для групп вопросов
   const SetParameter = (group, value) => {
-    let points = (value + 1) * 3;
+    const multiplier = ((100 / 6) / 5).toFixed(2);
+    let points = (value + 1) * multiplier;
     group.dataset.value = points;
   };
 
@@ -111,7 +112,7 @@ if (survey) {
 
     _.forEach(groups, group => {
       const value = group.dataset.value;
-      if (value && group.dataset.parameter === param) points += parseInt(value);
+      if (value && group.dataset.parameter === param) points += parseFloat(value);
     });
 
     if (!(param in surveyResult.parameters)) surveyResult.parameters[param] = 0;
