@@ -422,11 +422,11 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
     <div class="container">
       <div class="footer">
         <div class="footer__social">
-          <a href="" class="me-1 me-lg-3 link">
+          <a href="https://www.instagram.com/aleksandr_shafrov/" target="_blank" class="me-1 me-lg-3 link">
             <img class="footer__icon " src="img/social/instagram.png" alt="">
           </a>
 
-          <a href="" class="me-1 me-lg-3 link">
+          <a href="https://www.instagram.com/aleksandr_shafrov/" target="_blank" class="me-1 me-lg-3 link">
             <img class="footer__icon " src="img/social/vk.png" alt="">
           </a>
 
@@ -438,7 +438,7 @@ $response = $service->spreadsheets_values->get($spreadsheetId, $range);
             <img class="footer__icon " src="img/social/facebook.png" alt="">
           </a>
 
-          <a href="" class="link">
+          <a href="https://www.tiktok.com/@project_kompas?" target="_blank" class="link">
             <img class="footer__icon " src="img/social/tiktok.png" alt="">
           </a>
         </div>
